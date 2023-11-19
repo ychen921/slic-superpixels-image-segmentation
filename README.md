@@ -38,3 +38,11 @@ In the `superpixel_dataset.py`, for each image :
     2.3. Get the same region from the segmentation image (from the file with similar name with *_GT). The class for this sp_i is mode of segmentation classes in that same region. Save the dilated region as npy (jpg is lossy for such small patches).<be>
 
 <img src="images/data_process.png" width="80%" height="80%">
+
+### Segmentation Network
+`data_loader.py`: A data loader that retrieves superpixels and labels.
+`model.py`: We use a VGG pre-trained network and replace the last few layers with a fully connected layer.
+`Solver.py`:  Eefine the classification loss and optimizer such that we can learn a superpixel classifier from the backpropagation algorithm.
+`train_model.py`: Train the network and observe the loss in time. During the inference stage, combine the SLIC Superpixels' predicted labels to form the whole input image's superpixel segmentation results.
+`visualize.py`: Visualize the test segmentation map vs. the ground truth segmentation map.
+
