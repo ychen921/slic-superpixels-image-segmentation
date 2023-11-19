@@ -2,7 +2,7 @@
 This project was composed of SLIC superpixel and image segmentation
 
 ## Dataset
-You can download the sample dataset [here](https://download.microsoft.com/download/A/1/1/A116CD80-5B79-407E-B5CE-3D5C6ED8B0D5/msrc_objcategimagedatabase_v1.zip)
+You can download the MSRC V1 dataset [here](https://download.microsoft.com/download/A/1/1/A116CD80-5B79-407E-B5CE-3D5C6ED8B0D5/msrc_objcategimagedatabase_v1.zip)
 
 ## Superpixels
 A superpixel can be defined as a group of pixels that share similar characteristics (such as intensity, or distance). Superpixel algorithms have been widely applied to various tasks like Image Segmentation and Object detection. 
