@@ -25,7 +25,7 @@ SLIC (Simple Linear Iterative Clustering) algorithm generates superpixels by clu
 The goal of the second part is to build a segmentation network, which uses SLIC Superpixels as input. In essense, it will be a classifier for superpixels. The end product is a system which, when given an image, computes superpixels and classifies each superpixel as one of the 14 classes of MSRC v1.
 
 
-### Superpixel Dataset
+### Superpixel Dataset `superpixel_dataset`
 First, we dilate each superpixel and save the output superpixel patch from SLIC into 224X224 size image (after rescaling), along with the ground truth segments label.
 
 For the purpose of consistency, we adopt the existing SLIC implementation from the scikit-learn machine learning package.
