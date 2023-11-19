@@ -1,2 +1,2 @@
 # slic-superpixels-image-segmentation
-CMSC828I course assignment
+##'SLIC_siperpixel.py'
