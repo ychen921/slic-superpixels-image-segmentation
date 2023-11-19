@@ -41,8 +41,14 @@ In the `superpixel_dataset.py`, for each image :
 
 ### Segmentation Network
 `data_loader.py`: A data loader that retrieves superpixels and labels.
-`model.py`: We use a VGG pre-trained network and replace the last few layers with a fully connected layer.
+
+`model.py`: Apply VGG pre-trained network and replace the last few layers with a fully connected layer.
+
 `Solver.py`:  Eefine the classification loss and optimizer such that we can learn a superpixel classifier from the backpropagation algorithm.
+
 `train_model.py`: Train the network and observe the loss in time. During the inference stage, combine the SLIC Superpixels' predicted labels to form the whole input image's superpixel segmentation results.
+
 `visualize.py`: Visualize the test segmentation map vs. the ground truth segmentation map.
+
+### Visualization Result
 
