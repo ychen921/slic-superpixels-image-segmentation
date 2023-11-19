@@ -26,8 +26,6 @@ The goal of the second part is to build a segmentation network, which uses SLIC 
 
 
 ### Superpixel Dataset 
-First, we dilate each superpixel and save the output superpixel patch from SLIC into 224X224 size image (after rescaling), along with the ground truth segments label. 
-
 For the purpose of consistency, we adopt the existing SLIC implementation from the scikit-learn machine learning package.
 
 In the `superpixel_dataset.py`, for each image :
