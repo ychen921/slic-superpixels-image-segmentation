@@ -25,12 +25,12 @@ SLIC (Simple Linear Iterative Clustering) algorithm generates superpixels by clu
 The goal of the second part is to build a segmentation network, which uses SLIC Superpixels as input. In essense, it will be a classifier for superpixels. The end product is a system which, when given an image, computes superpixels and classifies each superpixel as one of the 14 classes of MSRC v1.
 
 
-### Superpixel Dataset `superpixel_dataset`
-First, we dilate each superpixel and save the output superpixel patch from SLIC into 224X224 size image (after rescaling), along with the ground truth segments label.
+### Superpixel Dataset 
+First, we dilate each superpixel and save the output superpixel patch from SLIC into 224X224 size image (after rescaling), along with the ground truth segments label. 
 
 For the purpose of consistency, we adopt the existing SLIC implementation from the scikit-learn machine learning package.
 
-For each image
+In the `superpixel_dataset.py`, for each image :
 1. Get superpixels sp_i for image x. We adopt 100 segments in this assignment, `segments = slic(image, n_segments=100, compactness=10)`.
 2. For every superpixel sp_i in the image <br>
     2.1. find the smallest rectangle which can enclose sp_i <br>
