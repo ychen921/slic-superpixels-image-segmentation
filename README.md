@@ -11,6 +11,9 @@ The k-means clustering algorithm is an unsupervised algorithm which, for some it
 
 We implement the pixel clustering function `Kmean_superpixel.py`. It takes input an image (shape = (n, m, 3)) and number of clusters. Each pixel should be represented by a vector with 3 values: (r, g, b, x, y)
 
+![Clusters](/images/kmean_clust.png)
+<img src="https://images/kmean_clust.png" width="100" height="100">
+
 ### SLIC superpixel
 SLIC (Simple Linear Iterative Clustering) algorithm generates superpixels by clustering pixels based on color similarity and proximity in the image plane. We implement SLIC algorithm `SLIC_superpixel.py` from scratch and the detail of the algorithm can be found [here](https://www.iro.umontreal.ca/~mignotte/IFT6150/Articles/SLIC_Superpixels.pdf)
 
