@@ -50,5 +50,8 @@ In the `superpixel_dataset.py`, for each image :
 
 `visualize.py`: Visualize the test segmentation map vs. the ground truth segmentation map.
 
-### Visualization Result
+### Visualization Results
 
+<img src="images/sample.png" width="40%" height="40%"> 
+<img src="images/seg_sample.png" width="40%" height="40%"> 
+<img src="images/seg_test.png" width="40%" height="40%">
