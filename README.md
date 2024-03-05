@@ -1,6 +1,6 @@
-# slic-superpixels-image-segmentation
-This project was composed of SLIC superpixel and image segmentation
-
+# SLIC Superpixels & Image Segmentation
+This project was composed of implementing SLIC superpixel from scratch and image segmentation. Our model can achieve accuracy of ***84.661%*** for predicting superpixels.
+.
 ## Dataset
 You can download the MSRC V1 dataset [here](https://download.microsoft.com/download/A/1/1/A116CD80-5B79-407E-B5CE-3D5C6ED8B0D5/msrc_objcategimagedatabase_v1.zip)
 
