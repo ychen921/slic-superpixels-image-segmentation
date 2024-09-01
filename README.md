@@ -1,5 +1,5 @@
 # SLIC Superpixels & Image Segmentation
-This project was composed of implementing SLIC superpixel from scratch and image segmentation. Our model can achieve accuracy of ***84.661%*** for predicting superpixels.
+This project was composed of implementing SLIC superpixel from scratch and image segmentation. We have trained two model oneOur model can achieve the accuracy of ***84.661%*** by using multi-resolution for predicting superpixels.
 .
 ## Dataset
 You can download the MSRC V1 dataset [here](https://download.microsoft.com/download/A/1/1/A116CD80-5B79-407E-B5CE-3D5C6ED8B0D5/msrc_objcategimagedatabase_v1.zip)
@@ -38,18 +38,20 @@ In the `superpixel_dataset.py`, for each image :
 <img src="images/data_process.png" width="80%" height="80%">
 
 ### Segmentation Network
-`data_loader.py`: A data loader that retrieves superpixels and labels.
-
-`model.py`: Apply VGG pre-trained network and replace the last few layers with a fully connected layer.
-
-`Solver.py`:  Define the classification loss and optimizer such that we can learn a superpixel classifier from the backpropagation algorithm.
-
-`train_model.py`: Train the network and observe the loss in time. During the inference stage, combine the SLIC Superpixels' predicted labels to form the whole input image's superpixel segmentation results.
-
-`visualize.py`: Visualize the test segmentation map vs. the ground truth segmentation map.
+1. Basic: We have applied the VGG pre-trained network and replaced the last few layers with a fully connected layer. The inputs are the superpixels and the outputs are the label of superpixels.
+2. Multi-resolution: To improve the performance of the superpixel prediction, we utilized the multi-resolution technique from [1] which inputs region maps to the separated VGG networks. These features capture information at various scales, ranging from fine details to more global contextual information.
 
 ### Visualization Results
 
-<img src="images/sample.png" width="40%" height="40%"> 
-<img src="images/seg_sample.png" width="40%" height="40%"> 
-<img src="images/seg_test.png" width="40%" height="40%">
+| Model       | Training L2     | 
+| :---        |    :----:       | 
+| VGG-19  | 72.42% | 
+| VGG-19 (Multi-resoulotion)| **84.66%**| 
+
+Sample |  Ground Truth | Prediction (multi-resolution)
+:-------------------------:|:-------------------------:|:-------------------------:
+<img src="images/sample.png" width="80%" height="80%"> | <img src="images/seg_sample.png" width="80%" height="80%"> | <img src="images/seg_test.png" width="80%" height="80%">
+
+
+## References
+1. Mostajabi, M., Yadollahpour, P., & Shakhnarovich, G. (2015). Feedforward semantic segmentation with zoom-out features. In Proceedings of the IEEE conference on computer vision and pattern recognition (pp. 3376-3385).
