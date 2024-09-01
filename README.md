@@ -39,11 +39,14 @@ In the `superpixel_dataset.py`, for each image :
 
 ### Segmentation Network
 1. Basic: We have applied the VGG pre-trained network and replaced the last few layers with a fully connected layer. The inputs are the superpixels and the outputs are the label of superpixels.
-2. Multi-resolution: To improve the performance of the superpixel prediction, we utilized the multi-resolution technique from [1] which inputs region maps to the separated VGG networks. These features capture information at various scales, ranging from fine details to more global contextual information.
+2. Multi-resolution: To improve the performance of the superpixel prediction, we utilized the multi-resolution technique from [1] which inputs region maps to the separated VGG networks. These features capture information at various scales, ranging from fine details to more global contextual information. The figure below, cited from [1], demonstrates the concept of zoom-out features of the superpixel.
+   
+<img src="images/zoom_out.png" width="80%" height="80%">
+
 
 ### Visualization Results
 
-| Model       | Training L2     | 
+| Model       | Test Acc.     | 
 | :---        |    :----:       | 
 | VGG-19  | 72.42% | 
 | VGG-19 (Multi-resoulotion)| **84.66%**| 
